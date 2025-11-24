@@ -2,6 +2,7 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+ 
   reactStrictMode: true,
   
   // 1. Ensure this entire block is at the root level of nextConfig
