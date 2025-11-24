@@ -1,75 +1,96 @@
-import React from 'react';
+import React from "react";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
+
+  const sendEmail = (e) => {
+  e.preventDefault(); // prevent page reload
+
+  emailjs
+    .sendForm(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      e.target,
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+    )
+    .then(
+      (result) => {
+        console.log(result.text);
+        alert("Message sent successfully!");
+      },
+      (error) => {
+        console.log(error.text);
+        alert("Failed to send message.");
+      }
+    );
+
+  e.target.reset(); // reset form after submission
+};
   return (
-    <section
-      id="contact"
-      className="py-20 md:py-28 bg-gradient-to-br from-sky-50 via-slate-50 to-blue-100"
-    >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 md:mb-20">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold gradient-text bg-gradient-to-r from-blue-600 to-sky-500 mb-6 pb-2 animate-on-scroll">
-            Connect With Us
+    <section id="contact" className="section-padding bg-contact-light-purple">
+      <div className="section-container">
+        <div  data-aos="fade-up" className="section-heading">
+          <h2>
+            <span>Connect With Us</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed animate-on-scroll">
+          <p>
             We'd love to hear from you! Whether you have questions, want to
-            start the enrollment process, or just want to say hello, our team
-            is ready to assist you.
+            start the enrollment process, or just want to say hello, our team is
+            ready to assist you.
           </p>
         </div>
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-12 items-stretch">
           <div className="lg:w-3/5 xl:w-1/2 w-full animate-on-scroll">
             <div className="glass p-8 sm:p-10 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out h-full flex flex-col">
-              <h3 className="text-3xl font-bold text-gray-800 mb-8 text-center sm:text-left">
+              <h3 className="heading-blue">
                 Send Us a Message
               </h3>
               <form
-                id="contactForm"
-                action="https://formspree.io/f/YOUR_FORMSPREE_ID"
-                method="POST"
-                noValidate
-                className="space-y-6 flex-grow flex flex-col"
-              >
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+  id="contactForm"
+  onSubmit={sendEmail}
+  noValidate
+  className="space-y-6 flex-grow flex flex-col"
+>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 color-blue-h1">
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-semibold text-gray-700 mb-1.5"
+                      className="block text-sm font-semibold  mb-1.5"
                     >
-                      Full Name <span className="text-red-500">*</span>
+                      Full Name <span className="color-danger">*</span>
                     </label>
                     <input
                       type="text"
                       name="name"
                       id="name"
                       required
-                      className="block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-offset-1 focus:ring-blue-500 focus:border-blue-500 text-sm transition-all duration-200 focus:shadow-md"
+                      className="block w-full custom-input"
                       aria-required="true"
                       aria-describedby="nameError"
                     />
                     <p
-                      className="text-red-500 text-xs mt-1.5 hidden"
+                      className="color-danger text-xs mt-1.5 hidden"
                       id="nameError"
                     ></p>
                   </div>
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-semibold text-gray-700 mb-1.5"
+                      className="block text-sm font-semibold mb-1.5"
                     >
-                      Email Address <span className="text-red-500">*</span>
+                      Email Address <span className="color-danger">*</span>
                     </label>
                     <input
                       type="email"
                       name="email"
                       id="email"
                       required
-                      className="block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-offset-1 focus:ring-blue-500 focus:border-blue-500 text-sm transition-all duration-200 focus:shadow-md"
+                      className="block w-full custom-input"
                       aria-required="true"
                       aria-describedby="emailError"
                     />
                     <p
-                      className="text-red-500 text-xs mt-1.5 hidden"
+                      className="color-danger text-xs mt-1.5 hidden"
                       id="emailError"
                     ></p>
                   </div>
@@ -77,57 +98,54 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="phone"
-                    className="block text-sm font-semibold text-gray-700 mb-1.5"
+                    className="block text-sm font-semibold color-blue-h1  mb-1.5"
                   >
                     Phone Number
-                    <span className="text-gray-500 font-normal">
-                      (Optional)
-                    </span>
+                    <span className=" font-normal">(Optional)</span>
                   </label>
                   <input
                     type="tel"
                     name="phone"
                     id="phone"
-                    className="block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-offset-1 focus:ring-blue-500 focus:border-blue-500 text-sm transition-all duration-200 focus:shadow-md"
+                    className="block w-full px-4 py-3 custom-input"
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="subject"
-                    className="block text-sm font-semibold text-gray-700 mb-1.5"
+                    className="block text-sm font-semibold color-blue-h1 mb-1.5"
                   >
-                    Subject <span className="text-red-500">*</span>
+                    Subject <span className="color-danger">*</span>
                   </label>
                   <input
                     type="text"
                     name="subject"
                     id="subject"
                     required
-                    className="block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-offset-1 focus:ring-blue-500 focus:border-blue-500 text-sm transition-all duration-200 focus:shadow-md"
+                    className="block w-full custom-input color-blue-h1"
                     aria-required="true"
                     aria-describedby="subjectError"
                   />
                   <p
-                    className="text-red-500 text-xs mt-1.5 hidden"
+                    className="color-danger text-xs mt-1.5 hidden"
                     id="subjectError"
                   ></p>
                 </div>
                 <div className="flex-grow flex flex-col">
-                  <label
+                  <label 
                     htmlFor="message"
-                    className="block text-sm font-semibold text-gray-700 mb-1.5"
-                  >
-                    Your Message <span className="text-red-500">*</span>
+                    className="block text-sm font-semibold mb-1.5 color-blue-h1"
+                 > 
+                    Your Message <span className="color-danger">*</span>
                   </label>
                   <textarea
                     name="message"
                     id="message"
-                    rows="5"
                     required
-                    className="block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-offset-1 focus:ring-blue-500 focus:border-blue-500 text-sm transition-all duration-200 focus:shadow-md flex-grow resize-none"
+                    className="block w-full h-full flex-grow custom-input resize-none overflow-hidden"
                   ></textarea>
                   <p
-                    className="text-red-500 text-xs mt-1.5 hidden"
+                    className="color-danger text-xs mt-1.5 hidden"
                     id="messageError"
                   ></p>
                 </div>
@@ -136,13 +154,10 @@ const Contact = () => {
                     type="submit"
                     id="submitButton"
                     aria-label="Send message"
-                    className="w-full bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white font-semibold py-3.5 px-8 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
+                    className="w-full custom-input cta-button text-color-white"
                   >
                     <span id="buttonText">Send Message</span>
-                    <i
-                      id="sendIcon"
-                      className="fas fa-paper-plane ml-2.5"
-                    ></i>
+                    <i id="sendIcon" className="fas fa-paper-plane ml-2.5"></i>
                   </button>
                 </div>
                 <p
@@ -155,18 +170,18 @@ const Contact = () => {
           </div>
           <div className="lg:w-3/5 xl:w-1/2 w-full space-y-8 animate-on-scroll">
             <div className="glass p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-0.5">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">
+              <h3 className="heading-blue">
                 Opening Hours
-                <span className="text-base font-medium text-gray-500">
+                <span className="text-base font-medium color-pink-300-50">
                   (All Branches)
                 </span>
               </h3>
-              <div className="space-y-4 text-gray-700">
+              <div className="space-y-4 color-h1-blue">
                 <div className="flex items-center group">
-                  <div className="bg-sky-100 text-sky-600 rounded-full p-2.5 mr-4 group-hover:bg-sky-200 transition-colors duration-300">
+                  <div className="color-dark-pink bg-pink-300-50 rounded-full p-2.5 mr-4">
                     <i className="fas fa-calendar-alt fa-fw text-lg"></i>
                   </div>
-                  <span className="group-hover:text-sky-700 transition-colors duration-300">
+                  <span className="">
                     <strong className="font-semibold">
                       Sunday - Thursday:
                     </strong>
@@ -174,19 +189,19 @@ const Contact = () => {
                   </span>
                 </div>
                 <div className="flex items-center group">
-                  <div className="bg-sky-100 text-sky-600 rounded-full p-2.5 mr-4 group-hover:bg-sky-200 transition-colors duration-300">
+                  <div className="color-dark-yellow bg-yellow-300-50 rounded-full p-2.5 mr-4 ">
                     <i className="fas fa-calendar-day fa-fw text-lg"></i>
                   </div>
-                  <span className="group-hover:text-sky-700 transition-colors duration-300">
+                  <span className="">
                     <strong className="font-semibold">Saturday:</strong> 09:00
                     AM - 2:00 PM (Condition Apply)
                   </span>
                 </div>
                 <div className="flex items-center group">
-                  <div className="bg-red-100 text-red-500 rounded-full p-2.5 mr-4 group-hover:bg-red-200 transition-colors duration-300">
+                  <div className="color-dark-blue bg-blue-300-50 rounded-full p-2.5 mr-4 ">
                     <i className="fas fa-calendar-times fa-fw text-lg"></i>
                   </div>
-                  <span className="group-hover:text-red-700 transition-colors duration-300">
+                  <span className="">
                     <strong className="font-semibold">Friday:</strong>
                     Closed
                   </span>
@@ -194,39 +209,39 @@ const Contact = () => {
               </div>
             </div>
             <div className="glass p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-0.5">
-              <h3 className="text-2xl font-bold text-gray-800 mb-2">
+              <h3 className="heading-blue">
                 Mohammadpur Branch
               </h3>
-              <p className="text-sm font-semibold text-blue-600 mb-6">
+              <p className="text-sm font-semibold color-dark-pink mb-6">
                 (Head Office)
               </p>
-              <address className="space-y-4 text-gray-700 not-italic">
+              <address className="space-y-4  not-italic color-blue-h1">
                 <div className="flex items-start group">
-                  <div className="bg-blue-100 text-blue-600 rounded-full p-2.5 mr-4 mt-0.5 group-hover:bg-blue-200 transition-colors duration-300 shrink-0">
+                  <div className="color-dark-pink bg-pink-300-50 rounded-full p-2.5 mr-4 mt-0.5 group-hover:bg-blue-200 transition-colors duration-300 shrink-0">
                     <i className="fas fa-map-marker-alt fa-fw text-lg"></i>
                   </div>
-                  <span className="group-hover:text-blue-700 transition-colors duration-300">
+                  <span className="">
                     House-2/10, Humayun Road, Mohammadpur, Dhaka, Bangladesh
                   </span>
                 </div>
                 <div className="flex items-center group">
-                  <div className="bg-blue-100 text-blue-600 rounded-full p-2.5 mr-4 group-hover:bg-blue-200 transition-colors duration-300 shrink-0">
+                  <div className="color-dark-yellow bg-yellow-300-50 rounded-full p-2.5 mr-4 group-hover:bg-blue-200 transition-colors duration-300 shrink-0">
                     <i className="fas fa-phone fa-fw text-lg"></i>
                   </div>
                   <a
                     href="tel:01772523070"
-                    className="hover:text-blue-700 hover:underline transition-colors duration-300"
+                    className=" hover:underline transition-colors duration-300"
                   >
                     01772-523070
                   </a>
                 </div>
                 <div className="flex items-center group">
-                  <div className="bg-blue-100 text-blue-600 rounded-full p-2.5 mr-4 group-hover:bg-blue-200 transition-colors duration-300 shrink-0">
+                  <div className="color-dark-blue bg-blue-300-50 rounded-full p-2.5 mr-4  shrink-0">
                     <i className="fas fa-envelope fa-fw text-lg"></i>
                   </div>
                   <a
                     href="mailto:ikigaibd767@gmail.com"
-                    className="hover:text-blue-700 hover:underline transition-colors duration-300 break-all"
+                    className=" hover:underline transition-colors duration-300 break-all"
                   >
                     ikigaibd767@gmail.com
                   </a>
@@ -244,37 +259,37 @@ const Contact = () => {
                 ></iframe>
               </div>
             </div>
-            <div className="glass p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-0.5">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">
+            <div className="glass p-8 rounded-2xl shadow-xl color-blue-h1 hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-0.5">
+              <h3 className="heading-blue">
                 Gulshan Branch
               </h3>
-              <address className="space-y-4 text-gray-700 not-italic">
+              <address className="space-y-4 not-italic">
                 <div className="flex items-start group">
-                  <div className="bg-teal-100 text-teal-600 rounded-full p-2.5 mr-4 mt-0.5 group-hover:bg-teal-200 transition-colors duration-300 shrink-0">
+                  <div className="color-dark-pink bg-pink-300-50 rounded-full p-2.5 mr-4 mt-0.5  shrink-0">
                     <i className="fas fa-map-marker-alt fa-fw text-lg"></i>
                   </div>
-                  <span className="group-hover:text-teal-700 transition-colors duration-300">
+                  <span className="">
                     House 20, Road: 104, Gulshan-2, Dhaka-1212
                   </span>
                 </div>
                 <div className="flex items-center group">
-                  <div className="bg-teal-100 text-teal-600 rounded-full p-2.5 mr-4 group-hover:bg-teal-200 transition-colors duration-300 shrink-0">
+                  <div className="color-dark-yellow bg-yellow-300-50 rounded-full p-2.5 mr-4  shrink-0">
                     <i className="fas fa-phone fa-fw text-lg"></i>
                   </div>
                   <a
                     href="tel:01328079337"
-                    className="hover:text-teal-700 hover:underline transition-colors duration-300"
+                    className=" hover:underline transition-colors duration-300"
                   >
                     01328079337
                   </a>
                 </div>
                 <div className="flex items-center group">
-                  <div className="bg-teal-100 text-teal-600 rounded-full p-2.5 mr-4 group-hover:bg-teal-200 transition-colors duration-300 shrink-0">
+                  <div className=" color-dark-blue bg-blue-300-50 rounded-full p-2.5 mr-4 shrink-0">
                     <i className="fas fa-envelope fa-fw text-lg"></i>
                   </div>
                   <a
                     href="mailto:ikigaigulshan@gmail.com"
-                    className="hover:text-teal-700 hover:underline transition-colors duration-300 break-all"
+                    className=" hover:underline transition-colors duration-300 break-all"
                   >
                     ikigaigulshan@gmail.com
                   </a>
@@ -300,3 +315,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

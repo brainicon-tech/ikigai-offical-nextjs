@@ -14,10 +14,15 @@ const CtaButton = ({ handleSmoothScroll, className = "", children }) => {
     <a
       href="#contact"
       onClick={(e) => handleSmoothScroll(e, "#contact")}
-      // Default styles: responsive, rounded, gradient background, hover effects
-      className={` text-white font-bold py-3 px-6 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ${className}`}
+      className={`
+        text-white font-bold rounded-full
+        bg-gradient-to-r from-pink-500 to-purple-600
+        hover:shadow-lg hover:-translate-y-1 transition-all duration-300
+        px-6 py-3 text-base
+        sm:px-6 sm:py-3 sm:text-sm
+        ${className}
+      `}
     >
-      
       {children}
     </a>
   );

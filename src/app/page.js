@@ -1,5 +1,6 @@
 import React from "react";
 import Home from "./components/Home";
+import AOSWrapper from "./components/AosWrapper";
 
 /**
  * This is the main homepage application.
@@ -9,7 +10,9 @@ import Home from "./components/Home";
 export default function Page() {
   return (
     <>
-    <Home></Home>
+    <AOSWrapper>
+      <Home></Home>
+    </AOSWrapper>
     </>
   );
 }

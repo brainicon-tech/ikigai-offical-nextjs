@@ -7,6 +7,9 @@ import LearningModel from "./LearningModel";
 import Programs from "./Programs";
 import Testimonials from "./Testimonials";
 import Contact from "./Contact";
+import Gallery from "./Gallery";
+import Reel from "./reels";
+import SwipeSlide from "./SwipeSlide";
 
 const Home = () => {
   useEffect(() => {
@@ -139,6 +142,8 @@ const Home = () => {
     <main>
       <Hero />
       <About />
+      <Gallery /> 
+      <Reel />
       <HomeActivity />
       <LearningModel />
       <Programs />

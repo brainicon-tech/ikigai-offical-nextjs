@@ -3,14 +3,13 @@ import { Inter, Bungee_Spice, Poppins, Nunito } from "next/font/google";
 import Footer from "./components/Footer";
 import Header from "./components/Header/Header";
 
-
-const bungeeSpice = Bungee_Spice ({
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+const bungeeSpice = Bungee_Spice({
   subsets: ["latin"],
-  weight: [ "400"],
+  weight: ["400"],
   display: "swap",
-}
-
-) 
+});
 
 // Configure Poppins
 const poppins = Poppins({

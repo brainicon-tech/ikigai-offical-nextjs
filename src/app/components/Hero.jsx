@@ -118,10 +118,10 @@ const App = () => {
         {/* Glassmorphism overlay */}
         <div className="absolute inset-0 bg-white-30 backdrop-blur-xl"></div>
 
-        <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="section-container relative">
           <div className="grid items-center gap-16 lg:grid-cols-2">
             {/* Content Side */}
-            <div className="text-center lg:text-left">
+            <div data-aos="fade-right" className="text-center lg:text-left  ">
               <div className="mb-8 inline-flex items-center rounded-full border border-bg-white-30 border-white-30 px-4 py-2 text-sm font-medium color-purple-800 welcome-shadow backdrop-blur-sm">
                 <span className="mr-2.5 h-2.5 w-2.5 animate-pulse rounded-full bg-dark-pink"></span>
                 Welcome to Ikigai Daycare & Preschool
@@ -156,9 +156,9 @@ const App = () => {
                 </CtaButton>
                 <a
                   href="#contact"
-                  className="inline-flex items-center justify-center btn-neumorphic border-animated"
+                  className="inline-flex items-center justify-center btn-neumorphic border-animated color-dark-pink"
                 >
-                  <CalendarIcon />
+                  <i className="fa-regular fa-calendar color-dark-pink mr-3"></i>
                   Schedule a Visit
                 </a>
               </div>
@@ -184,19 +184,19 @@ const App = () => {
            
 
             {/* Image Side */}
-            <div className="relative animate-[float_6s_ease-in-out_infinite]">
-              <div className="relative rounded-3xl neumorphic-card ">
-                <Image src="/images/hero.svg" alt="Children happily learning at Ikigai Preschool" width={1200} height={800} />
+            <div  data-aos="fade-right" className="relative animate-[float_6s_ease-in-out_infinite]">
+              <div className="  relative rounded-3xl neumorphic-card ">
+                <Image className="" src="/images/hero.svg" alt="Children happily learning at Ikigai Preschool" width={1200} height={800} />
                 {/* Floating Cards with subtle neumorphism */}
-                <div className="absolute -top-6 -left-8 animate-[float_6s_ease-in-out_1s_infinite] rounded-2xl neumorphic-card">
-                  <div className="flex items-center space-x-2">
+                <div className="absolute -top-1 -left-1  md:-top-6 md:-left-8 animate-[float_6s_ease-in-out_1s_infinite] rounded-2xl neumorphic-card">
+                  <div className="flex items-center space-x-1  md:space-x-2">
                     <div className="h-3 w-3 rounded-full bg-dark-pink"></div>
                     <span className="text-sm font-medium color-slate-dark ">
                       Safe Environment
                     </span>
                   </div>
                 </div>
-                <div className="absolute -bottom-6 -right-8 animate-[float_6s_ease-in-out_2s_infinite] rounded-2xl bg-[#e0e5ec] p-4 shadow-[7px_7px_15px_#bec3c9,-7px_-7px_15px_#ffffff]">
+                <div className="absolute -bottom-9 -right-2 md:-bottom-6 md:-right-8 animate-[float_6s_ease-in-out_2s_infinite] rounded-2xl bg-[#e0e5ec] p-4 shadow-[7px_7px_15px_#bec3c9,-7px_-7px_15px_#ffffff]">
                   <div className="flex items-center space-x-2">
                     <div className="h-3 w-3 rounded-full bg-dark-purple"></div>
                     <span className="text-sm font-medium color-slate-dark">
@@ -210,11 +210,7 @@ const App = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 transform animate-bounce">
-          <div className="flex h-10 w-6 justify-center rounded-full  border-slate">
-            <div className="mt-2 h-3 w-1 animate-pulse rounded-full color-slate-light"></div>
-          </div>
-        </div>
+        
       </section>
     </>
   );

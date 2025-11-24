@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import CtaButton from "./Button";
 
+
 // Reusable Icon for the arrow
 const ArrowIcon = () => (
   <svg
@@ -30,7 +31,7 @@ const ActivityCard = ({
   description,
 }) => {
   return (
-    <div className="group transform cursor-pointer overflow-hidden activity-card">
+    <div data-aos="fade-up" className="group transform cursor-pointer overflow-hidden activity-card">
       <div className="overflow-hidden">
         <div className="group h-60 w-full overflow-hidden relative">
           <Image
@@ -51,7 +52,7 @@ const ActivityCard = ({
           </span>
           <span className="text-sm font-medium color-p-blue">{date}</span>
         </div>
-        <h3 className="mb-3 text-2xl font-bold color-blue-h1">{title}</h3>
+        <h3 className="heading-blue">{title}</h3>
         <p className="mb-6 color-p-blue">{description}</p>
         <a
           href="#"
@@ -104,7 +105,7 @@ const HomeActivity = () => {
       <div className="absolute inset-0 bg-white-10  backdrop-blur-sm"></div>
       <div className="relative section-container">
         {/* Section Header */}
-        <div className="section-heading">
+        <div data-aos="fade-up" className="section-heading">
           <h2>
             <span>
             Activities & Latest News
@@ -121,15 +122,8 @@ const HomeActivity = () => {
         </div>
 
         {/* Call to Action Button */}
-        <div className="mt-20 text-center block">
-          <a
-            href="#gallery"
-            className="group cta-button inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-4 font-semibold text-white shadow-[7px_7px_15px_#bec3c9,-7px_-7px_15px_#ffffff] transition-all duration-300 hover:shadow-[4px_4px_10px_#bec3c9,-4px_-4px_10px_#ffffff] active:shadow-[inset_7px_7px_15px_#bec3c9,inset_-7px_-7px_15px_#ffffff]"
-          >
-            <span>View Our Activity</span>
-           <ArrowIcon />
-          </a>
-          
+        <div className="text-center mt-10">
+          <a href="#" className="btn-neumorphic border-animated inline-flex items-center color-dark-pink">View More Events <i className="fa-solid fa-chevron-right color-dark-pink ml-3"></i></a>
         </div>
       </div>
     </section>

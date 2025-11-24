@@ -1,5 +1,8 @@
 
 import React from "react";
+import { FaRegHandshake } from "react-icons/fa";
+import { FaBookOpen } from "react-icons/fa6";
+
 
 
 // Reusable Icon component for this section
@@ -43,7 +46,7 @@ const LearningModel = () => {
 
       <div className=" relative section-container">
         {/* Section Header */}
-        <div className="section-heading">
+        <div data-aos="fade-down" className="section-heading">
           <h2>
             <span >Our Learning Model</span>
           </h2>
@@ -56,15 +59,13 @@ const LearningModel = () => {
         {/* Core Blend: Montessori & Cambridge Cards */}
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-2">
           {/* Montessori Card */}
-          <div className="transform  neumorphic-card">
+          <div data-aos="fade-right"  className="transform  neumorphic-card">
             <div className="mb-6 flex items-center">
               <div className="mr-5 flex h-16 w-16 items-center justify-center neumorphic-gradient-card">
-                <Icon
-                  path="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2 1M4 7l2-1M4 7v2.5M12 21v-2.5M12 18.5v-2.5"
-                  className="h-8 w-8 color-dark-pink"
-                />
+                <FaRegHandshake size={32} className="color-dark-pink" />
+                
               </div>
-              <h4 className="text-3xl font-bold color-blue-h1">
+              <h4 className="heading-blue">
                 Montessori Elements
               </h4>
             </div>
@@ -89,15 +90,12 @@ const LearningModel = () => {
           </div>
 
           {/* Cambridge Card */}
-          <div className="transform neumorphic-card">
+          <div data-aos="fade-left"  className="transform neumorphic-card">
             <div className="mb-6 flex items-center">
               <div className="mr-5 flex h-16 w-16 items-center justify-center rounded-2xl neumorphic-gradient-indigo">
-                <Icon
-                  path="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                  className="h-8 w-8 color-dark-purple"
-                />
+                <FaBookOpen size={32} className="color-dark-purple "/>
               </div>
-              <h4 className="text-3xl font-bold color-blue-h1">
+              <h4 className="heading-blue">
                 Cambridge Framework
               </h4>
             </div>
@@ -121,9 +119,9 @@ const LearningModel = () => {
         </div>
 
         {/* Localization Section */}
-        <div className="relative mt-18 neumorphic-gradient-card-green">
-          <h3 className="flex items-center justify-center text-2xl font-bold color-blue-h1 md:text-3xl">
-            <span className="mr-4 mt-2 text-2xl md:text-3xl"><i className="fa-solid fa-flag"></i></span>
+        <div data-aos="fade-up"  className="relative mt-18 neumorphic-gradient-card-green">
+          <h3 className="flex items-center justify-center heading-blue">
+            <span className="ml-3 mt-2 text-2xl md:text-3xl"><i className="fa-solid fa-flag mr-3"></i></span>
            Localization for Bangladesh
           </h3>
           <p className="mx-auto mt-3 max-w-3xl color-p-blue">
