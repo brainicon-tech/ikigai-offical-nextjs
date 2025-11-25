@@ -11,15 +11,11 @@ Modern corporate website for **Ikigai Corporation**, built for product showcasin
 - Framer Motion  
 - Lucide Icons  
 
-### **Backend / API**
-- Next.js API Routes  
-- Node.js  
 
 ### **UI/UX**
 - Utility-first Tailwind design  
 - Modern sections & components  
-- Smooth animations  
-- Mobile-first responsive layout  
+- Smooth animations   
 - Optimized images using `next/image`  
 
 ---
