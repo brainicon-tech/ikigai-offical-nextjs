@@ -32,7 +32,7 @@ export default function FeaturedArticle() {
             <div className="mt-6">
               <a
                 href="#"
-                className="text-indigo-600 hover:text-indigo-900 font-medium flex items-center"
+                className="text-indigo-600 hover:text-indigo-900 font-medium flex items-center transition-colors duration-200"
               >
                 Read Full Article
                 <svg
@@ -47,7 +47,7 @@ export default function FeaturedArticle() {
                     strokeLinejoin="round"
                     strokeWidth="2"
                     d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                  ></path>
+                  />
                 </svg>
               </a>
             </div>
@@ -59,6 +59,7 @@ export default function FeaturedArticle() {
                 src="/images/article01.jpg"
                 alt="Child playing with colorful blocks"
                 fill
+                unoptimized={true}
                 className="rounded-t-lg md:rounded-r-lg md:rounded-t-none md:rounded-l-none"
                 style={{ objectFit: "cover" }}
               />

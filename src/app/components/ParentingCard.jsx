@@ -4,9 +4,9 @@ import Image from 'next/image';
 import { Music, Smile, Compass, BookOpen, Feather, Zap, Check } from 'lucide-react'; // Added Check icon
 
 // --- DATA DEFINITION ---
-const preplayImg = "/images/parenting-program03.JPG";
+const preplayImg = "/images/parenting-program03.jpg";
 const playImg = "/images/curriculum.jpg";
-const nursingImg = "/images/IMG_4215.JPG";
+const nursingImg = "/images/img_4215.jpg";
 
 const CARD_DATA = [
   {
@@ -110,7 +110,7 @@ const ProgramCardHeroStyle = ({ group, reverse }) => {
           </div>
 
           {/* Ikigai Quote */}
-          <div className="flex items-start p-4 bg-yellow-50 rounded-lg border-l-4 border-pink-500">
+          <div className="flex items-start p-4 bg-yellow-50 rounded-3xl border-l-4 border-pink-500">
             <Feather className="w-5 h-5 color-dark-pink mt-0.5 flex-shrink-0" />
             <p className="ml-3 text-sm color-gray-dark italic">{group.ikigaiQuote}</p>
           </div>
@@ -125,7 +125,8 @@ const ProgramCardHeroStyle = ({ group, reverse }) => {
             src={group.image.src}
             alt={group.image.alt}
             fill
-            className="object-cover rounded-3xl"
+            unoptimized={true}
+            className="object-cover w-full h-full rounded-3xl"
             priority
           />
         </div>

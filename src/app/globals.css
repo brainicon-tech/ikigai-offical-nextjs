@@ -200,6 +200,17 @@
   }
 }
 
+    /* Hide scrollbar for Chrome, Safari, and Edge */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.scrollbar-none {
+  scrollbar-width: none;
+}
+
+
 .neumorphic-card {
   background-color: #e0e5ec; 
   padding: 1.5rem;

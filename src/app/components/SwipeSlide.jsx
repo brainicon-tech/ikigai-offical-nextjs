@@ -14,7 +14,7 @@ const testimonialsData = [
     role: "Parent of a 4-year-old",
     quote:
       "Ikigai has been a wonderful second home for our child. The teachers are so caring and attentive, and we've seen incredible growth in their confidence and learning.",
-    imgSrc: "/images/testimonial-slider-images/IMG_4215.JPG",
+    imgSrc: "/images/img_4215.jpg",
     alt: "Parent Aisha K.",
   },
   {
@@ -22,7 +22,7 @@ const testimonialsData = [
     role: "Parent of a 3-year-old",
     quote:
       "The play-based learning at Ikigai is fantastic! Our son going to school every day and is always excited to share what he's learned. The environment is so positive.",
-    imgSrc: "/images/testimonial-slider-images/IMG_7331.JPG",
+    imgSrc: "/images/img_7331.jpg",
     alt: "Parent Rohan M.",
   },
   {
@@ -30,7 +30,7 @@ const testimonialsData = [
     role: "Parent of a 2-year-old",
     quote:
       "We are so grateful for the team at Ikigai. The is excellent, the facilities are inviting, and most importantly, our daughter is happy and learning so much!",
-    imgSrc: "/images/testimonial-slider-images/IMG_7853.JPG",
+    imgSrc: "/images/img_7853.jpg",
     alt: "Parent Farzana L.",
   },
   {
@@ -38,7 +38,7 @@ const testimonialsData = [
     role: "Parent of a 5-year-old",
     quote:
       "The pre-K program prepared our son perfectly for kindergarten. The balance of play and academics is just right. The staff truly cares about each child's development.",
-    imgSrc: "/images/testimonial-slider-images/play.JPG",
+    imgSrc: "/images/play.jpg",
     alt: "Parent David P.",
   },
 ];

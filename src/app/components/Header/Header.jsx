@@ -177,7 +177,7 @@ const Header = () => {
           id="top-info-bar"
           className="bg-primary backdrop-blur-md transition-all duration-400"
         >
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 md:py-3 py-2 flex justify-between items-center text-base">
+          <div className="section-container md:py-3 py-2 flex justify-between items-stretch text-base">
             <div className="flex items-center md:space-x-6 space-x-3">
               <a
                 href="tel:+8801772523070"
@@ -237,9 +237,9 @@ const Header = () => {
         {/* Main Navigation Bar */}
         <nav
           id="main-nav"
-          className="px-4 sm:px-6 lg:px-8 backdrop-blur-xl bg-header-transparent transition-all duration-100"
+          className=" backdrop-blur-xl bg-header-transparent transition-all duration-100"
         >
-          <div className=" mx-auto">
+          <div className="section-container ">
             <div className="flex justify-between items-center h-20 md:h-20">
               {/* Logo Link: Always links to the home page route / */}
               <Link
@@ -447,7 +447,7 @@ const Header = () => {
                 }}
                 // DYNAMIC ACTIVE CLASS FOR MOBILE
                 className={`mobile-nav-item block px-4 py-3 rounded-xl text-base font-semibold ${
-                  currentPath === "/home"
+                  currentPath === "/"
                     ? "text-color-dark-pink bg-pink-white"
                     : "text-color-gray-dark hover:text-color-dark-pink"
                 }`}

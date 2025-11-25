@@ -1,21 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-
-
-// Keyframe animations for the background blobs
-// const Keyframes = () => (
-//   <style>
-//     {`
-//         @keyframes morph {
-//           0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-//           50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
-//           100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-//         }
-//       `}
-//   </style>
-// );
-
 const About = () => {
   return (
     <>
@@ -50,7 +35,7 @@ const About = () => {
               <h3 className="heading-blue">
                 Our Mission & Values
               </h3>
-              <p className="mb-8 leading-relaxed color-p-blue">
+              <p className="mb-8 leading-relaxed  para">
                 To cultivate a vibrant, inclusive community where children are
                 empowered to explore, create, and develop a deep love for
                 learning. We strive to nurture their unique talents and guide

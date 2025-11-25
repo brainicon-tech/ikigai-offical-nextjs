@@ -92,8 +92,9 @@ const GridImage = ({ src, content, onClick }) => {
         src={src}
         alt={content?.title || "Grid content"}
         fill
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        className="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-110"
+        unoptimized={true} 
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) "
+        className="object-cover max-w-full max-h-full transition-transform duration-500 ease-in-out group-hover:scale-110"
         onError={(e) => {
           e.target.style.display = "none";
           console.error(`Failed to load image: ${src}`);
@@ -119,7 +120,7 @@ const ImageModal = ({ src, onClose }) => {
       onClick={onClose}
     >
       <div
-        className="relative w-auto h-auto max-h-[80vh] max-w-[90vw] lg:max-w-4xl"
+        className="relative w-auto h-auto max-h-[50vh] max-w-[60vw] lg:max-w-4xl"
         onClick={(e) => e.stopPropagation()}
       >
         <Image
@@ -127,13 +128,12 @@ const ImageModal = ({ src, onClose }) => {
           alt="Expanded view"
           width={1920}
           height={1080}
-          className="object-contain rounded-lg w-auto h-auto max-h-[80vh] max-w-[90vw]"
+          className="object-contain rounded-lg w-auto h-auto max-h-[50vh] max-w-[60vw]"
         />
       </div>
     </div>
   );
 };
-
 // --- Reusable Grid Block Component ---
 const ComplexImageGrid = ({ images, onImageClick, idPrefix }) => (
   <div
@@ -307,8 +307,6 @@ export default function Gallery() {
   return (
     <div  data-aos="fade-up" className="w-full  flex items-center justify-center font-sans overflow-x-hidden">
       <InfiniteImageGridSlider />
-
-      
     </div>
   );
 }

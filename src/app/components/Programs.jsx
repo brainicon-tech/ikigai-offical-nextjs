@@ -530,7 +530,7 @@ const scrollToSection = (id) => {
                 </p>
               </div>
               <div className="grid lg:grid-cols-2 gap-10 items-center">
-                <div className="glass p-8 md:p-12 rounded-2xl shadow-xl">
+                <div className="glass p-6 md:p-12 rounded-2xl shadow-xl">
                   <h3 className="heading-blue">Mindful Parenting Workshops</h3>
                   <p className="color-gray-dark my-4">
                     Our workshops provide a supportive space to learn practical
@@ -543,7 +543,7 @@ const scrollToSection = (id) => {
                     View Workshop Schedule &rarr;
                   </a>
                 </div>
-                <div className="glass p-8 md:p-12 rounded-2xl shadow-xl">
+                <div className="glass p-6 md:p-12 rounded-2xl shadow-xl">
                   <h3 className="heading-blue">
                     Parent-Child Discovery Sessions
                   </h3>
@@ -579,10 +579,11 @@ const scrollToSection = (id) => {
               <div className="grid lg:grid-cols-2 items-center gap-12 lg:gap-20">
                 <div className="lg:order-2">
                   <Image
-                    src="/images/toddler-playing.webp"
+                    src="/images/article02.jpg"
                     alt="A toddler playing and developing"
                     width={760}
                     height={380}
+                    unoptimized={true}
                     className="rounded-2xl shadow-2xl object-cover w-full"
                   />
                 </div>
@@ -609,10 +610,11 @@ const scrollToSection = (id) => {
               <div className="grid lg:grid-cols-2 items-center gap-12 lg:gap-20">
                 <div>
                   <Image
-                    src="/images/preparing.avif"
+                    src="/images/article04.jpg"
                     alt="Children preparing for school happily"
                     width={760}
                     height={450}
+                    unoptimized={true}
                     className="rounded-2xl shadow-2xl object-cover"
                   />
                 </div>

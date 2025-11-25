@@ -5,7 +5,7 @@ import CtaButton from "./Button"; // Keep your CTA component
 
 // Mocked paths based on your original file names
 const stepToShineImg = "/images/step-to-shine.jpg"; 
-const stepUpToSchoolImg = "/images/step-upto-school.JPG"; 
+const stepUpToSchoolImg = "/images/step-upto-school.jpg"; 
 
 // ICON MAPPING
 const IconMap = {
@@ -126,7 +126,7 @@ const GroupCard = ({ group, reverse }) => {
   const imageOrder = reverse ? "order-1 lg:order-2" : "order-1 lg:order-2";
 
   return (
-    <div className="bg-white-50 p-2 md:p-6 rounded-3xl shadow-xl overflow-hidden mb-12 transition duration-300 hover:-translate-y-2 hover:shadow-lg">
+    <div className="bg-white-50 p-2 md:p-6 rounded-2xl shadow-xl overflow-hidden mb-12 transition duration-300 hover:-translate-y-2 hover:shadow-lg">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
         {/* Content Column */}
         <div className={contentOrder}>
@@ -159,6 +159,7 @@ const GroupCard = ({ group, reverse }) => {
             src={src}
             alt={alt}
             fill
+            unoptimized={true}
             className="object-cover w-full h-full"
             sizes="(max-width: 768px) 100vw, 50vw"
             priority
@@ -190,7 +191,7 @@ const ShortProgramCard = () => {
           ))}
         </div>
 
-        <div className="text-center bg-white-50 p-8 rounded-3xl pb-12 mt-8 shadow-lg">
+        <div className="text-center bg-white-50 p-8 rounded-2xl pb-12 mt-8 shadow-lg">
           <h3 className="color-blue-h1 font-extrabold mb-3 text-lg md:text-2xl">
             Ready for the Next Step?
           </h3>

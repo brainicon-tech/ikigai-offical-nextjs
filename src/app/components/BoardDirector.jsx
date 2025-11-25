@@ -30,14 +30,7 @@ const teamMembers = [
       profession: null,
       specialization: "ECCD specialist",
     },
-    {
-      name: "Purni Aziz",
-      title: "Director, External Affairs",
-      image: "/images/Purni Aziz.svg", // Placeholder image path
-      education: "Masters in Arts",
-      profession: null,
-      specialization: null,
-    },
+    
     {
       name: "Shahinoor Zeenia",
       title: "Director, Operation",
@@ -61,7 +54,7 @@ const TeamCard = ({ member }) => {
           src={member.image}
           alt={member.name}
           fill
-          unoptimized={isSvg}
+          unoptimized={true} 
           className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
           priority
         />

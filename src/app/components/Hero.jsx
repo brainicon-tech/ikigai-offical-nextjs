@@ -106,9 +106,11 @@ const App = () => {
       <Keyframes />
       <section
         id="hero"
-        className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-pastel-gradient pt-12 pb-18 font-sans"
+        className="relative flex  items-center justify-center overflow-hidden bg-pastel-gradient pt-12 pb-18 font-sans"
       >
-        {/* Animated Gradient Blobs */}
+        
+        <div className="section-container">
+            {/* Animated Gradient Blobs */}
         <div className="absolute inset-0 h-full w-full">
           <div className="absolute top-[-20%] left-[10%] h-[500px] w-[500px] animate-[morph_8s_ease-in-out_infinite] rounded-full bg-purple-300-50 opacity-60 blur-3xl"></div>
           <div className="absolute top-[20%] right-[5%] h-[400px] w-[600px] animate-[morph_8s_ease-in-out_2s_infinite] rounded-full bg-pink-300-50 opacity-60 blur-3xl"></div>
@@ -118,18 +120,18 @@ const App = () => {
         {/* Glassmorphism overlay */}
         <div className="absolute inset-0 bg-white-30 backdrop-blur-xl"></div>
 
-        <div className="section-container relative">
-          <div className="grid items-center gap-16 lg:grid-cols-2">
+        <div className="">
+          <div className="grid items-center gap-16 grid-cols-1 lg:grid-cols-2">
             {/* Content Side */}
             <div data-aos="fade-right" className="text-center lg:text-left  ">
-              <div className="mb-8 inline-flex items-center rounded-full border border-bg-white-30 border-white-30 px-4 py-2 text-sm font-medium color-purple-800 welcome-shadow backdrop-blur-sm">
+              <div className="mb-8 inline-flex items-center rounded-full border border-white/50 px-4 py-2 text-sm font-medium color-purple-800 welcome-shadow backdrop-blur-sm">
                 <span className="mr-2.5 h-2.5 w-2.5 animate-pulse rounded-full bg-dark-pink"></span>
                 Welcome to Ikigai Daycare & Preschool
               </div>
 
               {/* Main Heading with 3D Glassmorphism Effect */}
               <h1
-                className="mb-6 text-5xl font-extrabold leading-tight color-h1-blue sm:text-6xl lg:text-7xl h1-text-shadow"
+                className="mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl  font-extrabold leading-tight color-h1-blue h1-text-shadow"
                 
               >
                 Nurturing{" "}
@@ -143,7 +145,7 @@ const App = () => {
                 in Every Child
               </h1>
 
-              <p className="mx-auto mb-10 max-w-xl text-lg leading-relaxed color-p-blue sm:text-xl lg:mx-0">
+              <p className=" mb-10 text-lg leading-relaxed color-p-blue   ">
                 Where little minds blossom through playful learning and
                 discovery in a safe, loving environment designed for growth and
                 happiness.
@@ -164,7 +166,7 @@ const App = () => {
               </div>
 
               {/* Stats */}
-              <div className="mx-auto grid max-w-md grid-cols-3 gap-6 lg:mx-0">
+              <div className=" grid max-w-md grid-cols-3 gap-4 lg:mx-0">
                 <div className="text-center">
                   <div className="text-2xl font-bold color-dark-pink">50+</div>
                   <div className="text-sm color-p-blue">Happy Families</div>
@@ -186,7 +188,7 @@ const App = () => {
             {/* Image Side */}
             <div  data-aos="fade-right" className="relative animate-[float_6s_ease-in-out_infinite]">
               <div className="  relative rounded-3xl neumorphic-card ">
-                <Image className="" src="/images/hero.svg" alt="Children happily learning at Ikigai Preschool" width={1200} height={800} />
+                <Image className="" src="/images/hero.svg" alt="Children happily learning at Ikigai Preschool"  width={1200} height={800} priority/>
                 {/* Floating Cards with subtle neumorphism */}
                 <div className="absolute -top-1 -left-1  md:-top-6 md:-left-8 animate-[float_6s_ease-in-out_1s_infinite] rounded-2xl neumorphic-card">
                   <div className="flex items-center space-x-1  md:space-x-2">
@@ -210,6 +212,7 @@ const App = () => {
         </div>
 
         {/* Scroll Indicator */}
+        </div>
         
       </section>
     </>

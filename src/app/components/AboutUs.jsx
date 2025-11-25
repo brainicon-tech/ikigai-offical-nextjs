@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 
-const BALL_PIT_IMAGE_PATH = '/images/about-us-cover.JPG';
-const CHILDREN_ON_FLOOR_IMAGE_PATH = '/images/daycare.JPG';
+const BALL_PIT_IMAGE_PATH = '/images/about-us-cover.jpg';
+const CHILDREN_ON_FLOOR_IMAGE_PATH = '/images/daycare.jpg';
 
 const AboutUs = () => {
     return (
@@ -42,6 +42,7 @@ const AboutUs = () => {
                             src={BALL_PIT_IMAGE_PATH}
                             alt="Child in ball pit"
                             fill={true} 
+                            unoptimized={true}
                             className="object-cover  transition duration-300 hover:scale-[1.05]" 
                             placeholder="blur" 
                             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYGD4DwAEMgG/o8I4lAAAAABJRU5ErkJggg=="
@@ -58,6 +59,7 @@ const AboutUs = () => {
                             src={CHILDREN_ON_FLOOR_IMAGE_PATH}
                             alt="Children sitting on the floor"
                             fill={true}
+                            unoptimized={true}
                             className="object-cover  transition duration-300 hover:scale-[1.05]" 
                             placeholder="blur" 
                             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYGD4DwAEMgG/o8I4lAAAAABJRU5ErkJggg=="

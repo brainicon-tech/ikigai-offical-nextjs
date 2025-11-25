@@ -1,5 +1,6 @@
 import {MetadataRoute} from 'next';
 
+export const dynamic = 'force-static';
 export default function sitemap(){
   const baseUrl = "www.ikigaibd.com";
   return [
