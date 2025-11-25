@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# IKIGAI BD – Official Website  
+## 🌐 Live Link  
+https://ikigaibd.com
+Modern corporate website for **Ikigai Corporation**, built for product showcasing, service presentation, and client interaction.
 
-## Getting Started
+## 🚀 Tech Stack  
+### **Frontend**
+- Next.js 14 (App Router)  
+- React 18  
+- Tailwind CSS  
+- Framer Motion  
+- Lucide Icons  
 
-First, run the development server:
+### **Backend / API**
+- Next.js API Routes  
+- Node.js  
 
+### **UI/UX**
+- Utility-first Tailwind design  
+- Modern sections & components  
+- Smooth animations  
+- Mobile-first responsive layout  
+- Optimized images using `next/image`  
+
+---
+
+## 📦 Features  
+- Product catalog listing  
+- Services showcase  
+- Company profile & mission  
+- Image/activity gallery  
+- Backend contact form  
+- Fast & SEO-optimized  
+- Fully responsive  
+
+---
+
+## 📁 Folder Structure  
+/app
+/components
+/products
+/services
+/about
+/contact
+/public
+/images
+/styles
+globals.css
+
+
+---
+
+## 🛠️ Installation  
 ```bash
+git clone https://github.com/your-repo/ikigaibd.git
+cd ikigaibd
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📞 Contact
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+IKIGAI Corporation
+Dhaka, Bangladesh
+Website: https://ikigaibd.com
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
